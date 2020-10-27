@@ -107,6 +107,7 @@ workflows:
   build-test:
     jobs:
       - runtest
+      - integration-tests-cocoapods
   docs:
     jobs:
       - docs-deploy:

@@ -108,7 +108,7 @@ jobs:
           name: Archive
           command: |
               cd IntegrationTests/CocoapodsIntegration/
-              xcodebuild archive -scheme "CocoapodsIntegration" -destination "generic/platform=iOS" -sdk "iphoneos" -allowProvisioningUpdates
+              fastlane gym
       
   integration-tests-swift-package-manager:
     macos:
@@ -145,7 +145,7 @@ jobs:
           name: Archive
           command: |
               cd IntegrationTests/SPMIntegration/
-              xcodebuild archive -scheme "SPMIntegration" -destination "generic/platform=iOS" -sdk "iphoneos" -allowProvisioningUpdates
+              fastlane gym
   
   integration-tests-carthage:
     macos:
@@ -196,7 +196,7 @@ jobs:
           name: Archive
           command: |
               cd IntegrationTests/CarthageIntegration/
-              xcodebuild archive -scheme "CarthageIntegration" -destination "generic/platform=iOS" -sdk "iphoneos" -allowProvisioningUpdates
+              fastlane gym
 
   integration-tests-xcode-direct-integration:
     macos:
@@ -233,7 +233,7 @@ jobs:
           name: Archive
           command: |
               cd IntegrationTests/XcodeDirectIntegration/
-              xcodebuild archive -scheme "XcodeDirectIntegration" -destination "generic/platform=iOS" -sdk "iphoneos" -allowProvisioningUpdates
+              fastlane gym
 
 workflows:
   version: 2

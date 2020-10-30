@@ -94,16 +94,16 @@ jobs:
           paths:
             - vendor/bundle
       
-      # - run:
-      #     name: Run tests
-      #     command: |
-      #         cd IntegrationTests/CocoapodsIntegration/
-      #         fastlane scan
-      # - store_test_results:
-      #     path: fastlane/test_output
-      # - store_artifacts:
-      #     path: fastlane/test_output/report.html
-      #     destination: test_report.html
+      - run:
+          name: Run tests
+          command: |
+              cd IntegrationTests/CocoapodsIntegration/
+              fastlane scan
+      - store_test_results:
+          path: fastlane/test_output
+      - store_artifacts:
+          path: fastlane/test_output/report.html
+          destination: test_report.html
       - run:
           name: Archive
           command: |
@@ -182,16 +182,16 @@ jobs:
           paths:
             - vendor/bundle
       
-      # - run:
-      #     name: Run tests
-      #     command: |
-      #         cd IntegrationTests/CarthageIntegration/
-      #         fastlane scan
-      # - store_test_results:
-      #     path: fastlane/test_output
-      # - store_artifacts:
-      #     path: fastlane/test_output/report.html
-      #     destination: test_report.html
+      - run:
+          name: Run tests
+          command: |
+              cd IntegrationTests/CarthageIntegration/
+              fastlane scan
+      - store_test_results:
+          path: fastlane/test_output
+      - store_artifacts:
+          path: fastlane/test_output/report.html
+          destination: test_report.html
       - run:
           name: Archive
           command: |
@@ -240,8 +240,8 @@ workflows:
     jobs:
       # - runtest
       # - integration-tests-cocoapods
-      # - integration-tests-swift-package-manager
-      - integration-tests-carthage
+      - integration-tests-swift-package-manager
+      # - integration-tests-carthage
       # - integration-tests-xcode-direct-integration
   docs:
     jobs:
